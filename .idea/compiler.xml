@@ -7,12 +7,14 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="IdvProj" />
+        <module name="Sort_Manager_GT" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="IdvProj" options="--add-modules java.base" />
+      <module name="Sort_Manager_GT" options="--add-modules java.base" />
     </option>
   </component>
 </project>
