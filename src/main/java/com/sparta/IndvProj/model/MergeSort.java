@@ -1,12 +1,12 @@
 package com.sparta.IndvProj.model;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
+import java.util.concurrent.TimeUnit;
+
 public class MergeSort implements Sorter{
-
-
-
-
-
-
+    private static Logger logger = LogManager.getLogger("Merge sort methodology");
 
     public static void merge (int[] inputArray, int[] leftHalf, int[] rightHalf) {
         int leftSize = leftHalf.length;
@@ -48,6 +48,7 @@ public class MergeSort implements Sorter{
 
     @Override
     public int[] sort(int[] array) {
+        long start = System.nanoTime();
         int inputLength = array.length;
 
         if (inputLength < 2) {
@@ -69,6 +70,8 @@ public class MergeSort implements Sorter{
         sort(rightHalf);
 
         merge(array, leftHalf, rightHalf);
+        long end = System.nanoTime();
+        logger.info("It took " + (TimeUnit.MICROSECONDS.convert(end-start, TimeUnit.NANOSECONDS)) + " milliseconds to run the Merge sort algorithm");
         return array;
     }
 
