@@ -8,6 +8,8 @@ import org.junit.jupiter.api.BeforeEach;
 
 //import java.util.Arrays;
 
+import java.util.Arrays;
+
 import static org.junit.Assert.assertArrayEquals;
 
 public class BubbleSortTest {
@@ -26,7 +28,9 @@ public class BubbleSortTest {
 
 //    private SortManager controller;
 //    @BeforeEach
-//    public void setUp() {controller = new SortManager();}
+//    public void setUp() {
+//        controller = new SortManager();
+//    }
 //
 //    public int[] copyArray(int[] originalArray){
 //        int[] inputArrayCopy = originalArray.clone();
