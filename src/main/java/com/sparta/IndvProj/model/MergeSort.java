@@ -49,6 +49,7 @@ public class MergeSort implements Sorter{
     @Override
     public int[] sort(int[] array) {
         long start = System.nanoTime();
+
         int inputLength = array.length;
 
         if (inputLength < 2) {
