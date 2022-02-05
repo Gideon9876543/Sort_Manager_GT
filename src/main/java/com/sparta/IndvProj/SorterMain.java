@@ -1,17 +1,14 @@
 package com.sparta.IndvProj;
 
 
-import com.sparta.IndvProj.controller.SorterController;
-import com.sparta.IndvProj.model.*;
-import com.sparta.IndvProj.view.SorterView;
-
-import java.util.Scanner;
+import com.sparta.IndvProj.controller.SortManager;
+import com.sparta.IndvProj.view.DisplayManager;
 
 public class SorterMain {
     public static void main(String[] args) {
-        SorterView view = new SorterView();
+        DisplayManager view = new DisplayManager();
         String desiredSortType = view.getDesiredSorter();
-        SorterController controller = new SorterController();
+        SortManager controller = new SortManager();
         int[] result = controller.sortArray(desiredSortType);
         view.displayResults(result);
 //        Sorter s = getSorter(desiredSortType);

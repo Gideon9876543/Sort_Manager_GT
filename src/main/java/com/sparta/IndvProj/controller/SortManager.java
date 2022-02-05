@@ -5,7 +5,7 @@ import com.sparta.IndvProj.model.MergeSortFactory;
 import com.sparta.IndvProj.model.Sorter;
 import com.sparta.IndvProj.model.SorterFactory;
 
-public class SorterController {
+public class SortManager {
 
     public int[] sortArray(String desiredSortType) {
         Sorter s = getSorter(desiredSortType);
@@ -15,6 +15,7 @@ public class SorterController {
         }
         return s.sort(arr);
     }
+
 
 
 //    public int[] initiateSorting(String desiredSortType) {
@@ -29,4 +30,5 @@ public class SorterController {
         };
         return sf.getInstance();
     }
+
 }

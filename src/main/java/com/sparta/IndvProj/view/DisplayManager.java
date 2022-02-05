@@ -3,7 +3,7 @@ package com.sparta.IndvProj.view;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class SorterView {
+public class DisplayManager {
     public String getDesiredSorter(){
         System.out.print("Please enter your desired sorting method: ");
         Scanner sc = new Scanner(System.in);
