@@ -1,3 +1,4 @@
+
 # Sort Manager Project
 
 ##Table Of Contents
@@ -90,3 +91,6 @@ some issues did remain unresolved, these were:
 
 
 
+=======
+## Sort_Manager_GT
+>>>>>>> 8ceb68085be5a4f3f1692e38550a333232aab9bc
