@@ -40,11 +40,11 @@ public class MergeSort implements Sorter{
 
     }
 
-    public static void printArray(int[] numbers) {
-        for (int i = 0; i < numbers.length; i++) {
-            System.out.println(numbers[i] + " ");
-        }
-    }
+//    public static void printArray(int[] numbers) {
+//        for (int i = 0; i < numbers.length; i++) {
+//            System.out.println(numbers[i] + " ");
+//        }
+//    }
 
     @Override
     public int[] sort(int[] array) {
