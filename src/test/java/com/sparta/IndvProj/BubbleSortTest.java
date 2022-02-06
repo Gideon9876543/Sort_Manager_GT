@@ -19,7 +19,8 @@ public class BubbleSortTest {
 
 
     @Test
-    public void testBubbleSortWithNegativeValues() {
+    @DisplayName("BubbleSort returns a sorted array of input consisting of positive and negative values")
+    public void testBubbleSortWithNegativeAndPositiveValues() {
         BubbleSort tester = new BubbleSort();
         int[] expected = new int[]{-1, 0, 8};
         assertArrayEquals(expected, tester.sort(new int[]{0, -1, 8}));
@@ -27,12 +28,32 @@ public class BubbleSortTest {
     }
 
     @Test
-    @DisplayName("BubbleSort returns a sorted array of some input")
+    @DisplayName("BubbleSort returns a sorted array of input consisting of positive values")
     public void testBubbleSortWithPositiveValues() {
         BubbleSort bso = new BubbleSort();
         int[] tester = {40, 48, 29, 65, 39, 75};
         assertArrayEquals(new int[]{29, 39, 40, 48, 65, 75}, bso.sort(tester));
     }
+
+    @Test
+    @DisplayName("BubbleSort returns a sorted array of input consisting of positive values")
+    public void testBubbleSortWithNegativeValues() {
+        BubbleSort bso = new BubbleSort();
+        int[] tester = {-40, -48, -29, -65, -39, -75};
+        assertArrayEquals(new int[]{-75, -65, -48, -40, -39, -29}, bso.sort(tester));
+    }
+
+    @Test
+    @DisplayName("BubbleSort returns a sorted array of input consisting of positive values")
+    public void testBubbleSortWithManyZeroValues() {
+        BubbleSort bso = new BubbleSort();
+        int[] tester = {0, 0, 0, 0, 0, 0};
+        assertArrayEquals(new int[]{0, 0, 0, 0, 0, 0}, bso.sort(tester));
+    }
+
+
+
+
 
 
 
