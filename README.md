@@ -41,11 +41,15 @@ displaying necessary performance information.
 1. Step one was to add the dependency for Junit to enable Junit testing.
 2. The second step was to add the log4j dependency to allow logging to be carried out.
 
+![Junit](https://user-images.githubusercontent.com/98388179/152702712-e75d3b1e-cdfe-482d-b1fd-b9ee12b9d585.png)
+
+![Logging](https://user-images.githubusercontent.com/98388179/152702733-3e103cab-6699-4820-8336-6955db39eac8.png)
+
 
 ### Test Information
 Two types of testing were used for this project, Junit (automatic) testing for each 
 Bubble, Merge and BST sorting method. Manual was then used to assess the controller. 
-These are detailed below:
+These are detailed below.
 
 #### Automatic Testing
 
@@ -60,7 +64,9 @@ testing array of:
 * A chosen amount of 0-value integers (Verified).
 * A null pointer exception being thrown (Verified).
 
-The coverage of these tests are shown below:
+The coverage and details of these tests are shown below:
+
+![Coverage](https://user-images.githubusercontent.com/98388179/152702847-6ed9bcb7-0d30-452a-bfe9-6e5349ea781b.png)
 
 ##### Binary Search Tree (BST):
 * Positive integers (Verified).
