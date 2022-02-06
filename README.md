@@ -32,7 +32,7 @@ comparing performance.
 for Bubble Sort, 'm' for Merge Sorting and 't' for Binary Search Tree (BST) 
 sorting, as seen:
 
-
+![Sortask](https://user-images.githubusercontent.com/98388179/152702177-52208876-6b5f-45f4-9a20-68e495af6d26.png)
 
 * The controller then creates a random array of 40 integers and the sorting method chosen with sort the array while 
 displaying necessary performance information.
