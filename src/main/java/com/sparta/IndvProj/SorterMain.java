@@ -13,7 +13,7 @@ public class SorterMain {
         DisplayManager view = new DisplayManager();
         String desiredSortType = view.getDesiredSorter();
         SortManager controller = new SortManager();
-        logger.info("Just created a sorting algorithm of type: " + desiredSortType);
+        logger.info("Sorting algorithm of type: " + desiredSortType + "Created");
         int[] result = controller.sortArray(desiredSortType);
         view.displayResults(result);
 

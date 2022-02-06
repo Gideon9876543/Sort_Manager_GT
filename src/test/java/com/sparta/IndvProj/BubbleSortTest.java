@@ -33,7 +33,7 @@ public class BubbleSortTest {
         int[] tester = {40, 48, 29, 65, 39, 75};
         assertArrayEquals(new int[]{29, 39, 40, 48, 65, 75}, bso.sort(tester));
     }
-    
+
 
 
 }

@@ -1,9 +1,6 @@
 package com.sparta.IndvProj.controller;
 
-import com.sparta.IndvProj.model.BubbleSortFactory;
-import com.sparta.IndvProj.model.MergeSortFactory;
-import com.sparta.IndvProj.model.Sorter;
-import com.sparta.IndvProj.model.SorterFactory;
+import com.sparta.IndvProj.model.*;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -20,39 +17,27 @@ public class SortManager {
         logger.info("Array of random integers have been created");
         return s.sort(arr);
     }
-
-
-    //    public int[] initiateSorting(String desiredSortType) {
-//        Sorter s = getSorter(desiredSortType);
-//        return s.sort();
-//    }
-    public static Sorter getSorter(String sortType) {
-        logger.info("Call the getSorter methods");
-
-        SorterFactory sf;
-        if ("b".equals(sortType)) {
+    public static Sorter getSorter(String sorterType) {
+        logger.info("Call getSort Reference");
+        SorterFactory sf = null;
+        if ("b".equals(sorterType)) {
             sf = new BubbleSortFactory();
-        } else if ("m".equals(sortType)) {
+        } else if ("m".equals(sorterType)) {
             sf = new MergeSortFactory();
+        } else if ("t".equals(sorterType)) {
+            sf = new BSTSortFactory();
         } else {
-            logger.error("Invalid input so Sorter Factory object will be null");
-            sf = null;
+            logger.error("Invalid input - SortFactory Object will be null");
         }
         return sf.getInstance();
     }
+
+
 }
 
 
 
 
-//    public static Sorter getSorter(String sorterType) {
-//        logger.info("Calling the getSorter methods");
-//        SorterFactory sf = switch (sorterType.toLowerCase()) {
-//            case "b" -> new BubbleSortFactory();
-//            case "m" -> new MergeSortFactory();
-//            default -> null;
-//        };
-//        return sf.getInstance();
-//    }
+
 
 
