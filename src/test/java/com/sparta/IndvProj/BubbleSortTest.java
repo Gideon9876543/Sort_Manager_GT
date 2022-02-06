@@ -36,7 +36,7 @@ public class BubbleSortTest {
     }
 
     @Test
-    @DisplayName("BubbleSort returns a sorted array of input consisting of positive values")
+    @DisplayName("BubbleSort returns a sorted array of input consisting of negative values")
     public void testBubbleSortWithNegativeValues() {
         BubbleSort bso = new BubbleSort();
         int[] tester = {-40, -48, -29, -65, -39, -75};
@@ -44,17 +44,17 @@ public class BubbleSortTest {
     }
 
     @Test
-    @DisplayName("BubbleSort returns a sorted array of input consisting of positive values")
+    @DisplayName("BubbleSort returns a sorted array of input consisting of zero values")
     public void testBubbleSortWithManyZeroValues() {
         BubbleSort bso = new BubbleSort();
         int[] tester = {0, 0, 0, 0, 0, 0};
         assertArrayEquals(new int[]{0, 0, 0, 0, 0, 0}, bso.sort(tester));
     }
-
-
-
-
-
-
-
+    @Test
+    @DisplayName("BubbleSort returns a statement after a null pointer exception is thrown")
+    public void givenNullArray_BubbleSort_ReturnsANullPointerException(){
+        BubbleSort bso = new BubbleSort();
+        int[] testInput = null;
+        NullPointerException npe = assertThrows(NullPointerException.class, () -> bso.sort(testInput), "No exception thrown");
+    }
 }
