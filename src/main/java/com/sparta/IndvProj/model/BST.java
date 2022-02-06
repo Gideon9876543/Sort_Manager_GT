@@ -8,7 +8,7 @@ import org.apache.logging.log4j.Logger;
 
 
 public class BST implements Sorter{
-    private static Logger logger = LogManager.getLogger("Binary Search Tree methodology");
+    private static Logger logger = LogManager.getLogger("Binary Search Tree (BST) methodology");
 
     public class Node {
         int number;
@@ -26,15 +26,15 @@ public class BST implements Sorter{
         Node root;
         ArrayList<Integer> list = new ArrayList<>();
         public BinarySearchTree createBST(int[] array) {
-            HashSet<Integer> inputSet = new HashSet<>();
+            HashSet<Integer> input = new HashSet<>();
             for (int i = 0; i  < array.length; i++){
-                if (!inputSet.contains(array[i])){
-                    inputSet.add(array[i]);
+                if (!input.contains(array[i])){
+                    input.add(array[i]);
                 }
             }
-            int[] theArray = new int[inputSet.size()];
+            int[] theArray = new int[input.size()];
             int i = 0;
-            for (int number : inputSet) {
+            for (int number : input) {
                 theArray[i++] = number;
             }
             BinarySearchTree bst = new BinarySearchTree();
@@ -46,20 +46,20 @@ public class BST implements Sorter{
         private void addToBST(int number) {
             root = addRepeat(root, number);
         }
-        private Node addRepeat(Node current, int number) {
-            if (current == null) {
+        private Node addRepeat(Node currently, int number) {
+            if (currently == null) {
                 return new Node(number);
             }
-            if (number < current.number) {
-                current.left = addRepeat(current.left, number);
+            if (number < currently.number) {
+                currently.left = addRepeat(currently.left, number);
             }
-            else if (number > current.number) {
-                current.right = addRepeat(current.right, number);
+            else if (number > currently.number) {
+                currently.right = addRepeat(currently.right, number);
             }
             else {
-                return current;
+                return currently;
             }
-            return current;
+            return currently;
         }
         private void orderOf(Node node) {
             if (node != null) {
