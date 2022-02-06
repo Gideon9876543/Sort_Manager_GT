@@ -10,7 +10,8 @@ public class DisplayManager {
     private static Logger logger = LogManager.getLogger("Viewer Logger");
 
     public String getDesiredSorter(){
-        System.out.print("Please enter your desired sorting method: ");
+        System.out.print("Please enter your desired sorting method, 'b' for Bubble Sort, 'm' for Merge Sort and " +
+                "'t' for Binary Search Tree (BST) sorting: ");
         Scanner sc = new Scanner(System.in);
         String desiredSortType = sc.next();
         return desiredSortType;

@@ -4,6 +4,8 @@ import com.sparta.IndvProj.model.*;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import java.util.Locale;
+
 public class SortManager {
     private static Logger logger = LogManager.getLogger("Sort Manager Logger");
 
@@ -20,14 +22,18 @@ public class SortManager {
     public static Sorter getSorter(String sorterType) {
         logger.info("Call getSort Reference");
         SorterFactory sf = null;
-        if ("b".equals(sorterType)) {
+        if ("b".equals(sorterType.toLowerCase())) {
             sf = new BubbleSortFactory();
-        } else if ("m".equals(sorterType)) {
+        }
+        else if ("m".equals(sorterType.toLowerCase())) {
             sf = new MergeSortFactory();
-        } else if ("t".equals(sorterType)) {
+        }
+        else if ("t".equals(sorterType.toLowerCase())) {
             sf = new BSTSortFactory();
-        } else {
+        }
+        else {
             logger.error("Invalid input - SortFactory Object will be null");
+
         }
         return sf.getInstance();
     }
